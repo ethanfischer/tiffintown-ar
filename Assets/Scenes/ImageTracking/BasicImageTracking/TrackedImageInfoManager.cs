@@ -15,9 +15,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
     public class TrackedImageInfoManager : MonoBehaviour
     {
         [SerializeField]
-        Vector3 modelScale = new Vector3(1,1,1); //Ethan edit
-        
-        [SerializeField]
         [Tooltip("The camera to set on the world space UI canvas for each instantiated image info.")]
         Camera m_WorldSpaceCanvasCamera;
 
@@ -87,7 +84,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 planeGo.SetActive(true);
 
                 // The image extents is only valid when the image is being tracked
-                trackedImage.transform.localScale = modelScale; //Ethan edit
+                // trackedImage.transform.localScale = modelScale; //Ethan edit
 
                 // Set the texture
                 var material = planeGo.GetComponentInChildren<MeshRenderer>().material;
@@ -104,7 +101,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             foreach (var trackedImage in eventArgs.added)
             {
                 // Give the initial image a reasonable default scale
-                trackedImage.transform.localScale = modelScale; //Ethan edit
+                // trackedImage.transform.localScale = modelScale; //Ethan edit
 
                 UpdateInfo(trackedImage);
             }

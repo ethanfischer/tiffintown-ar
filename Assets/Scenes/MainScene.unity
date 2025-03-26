@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_TrackingStateInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State Input
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 9711e61a-7b84-459d-99b7-3374d97ea6cc
@@ -1398,7 +1398,6 @@ GameObject:
   - component: {fileID: 1413594763}
   - component: {fileID: 1413594762}
   - component: {fileID: 1413594761}
-  - component: {fileID: 1413594760}
   - component: {fileID: 1413594765}
   m_Layer: 0
   m_Name: XR Origin
@@ -1407,25 +1406,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1413594760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413594759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92dfcdbbdd0754f9fb947d3639ad91c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Images:
-  - m_Texture: {fileID: 2800000, guid: d1879707d69d24adfb421bde69c92c94, type: 3}
-    m_Name: One
-    m_Width: 0.1
-  - m_Texture: {fileID: 2800000, guid: 038b8a7b4862745aaadfd7c9f14e7bbd, type: 3}
-    m_Name: Two
-    m_Width: 0.1
 --- !u!114 &1413594761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,7 +1436,7 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: c86e375d7e7430442a1104e88fa21f21,
     type: 2}
   m_MaxNumberOfMovingImages: 0
-  m_TrackedImagePrefab: {fileID: 7038220984588547355, guid: 9d914c3d0b1114964b654dbb800f73cd,
+  m_TrackedImagePrefab: {fileID: 7129980038245711556, guid: 17a700ac1cf1041d7b7aadba1d3a531e,
     type: 3}
 --- !u!114 &1413594763
 MonoBehaviour:
