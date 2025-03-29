@@ -21,7 +21,7 @@ public class LightingManager : MonoBehaviour
     // Color _shadowColor;
     // static readonly int _shadowColorShaderId = Shader.PropertyToID("_ShadowColor");
     // static readonly int _shadowMatrixShaderId = Shader.PropertyToID("_ShadowMatrix");
-    float _brightnessMultiplier = 1;
+    float _brightnessMultiplier = 2.3f;
     float _lightEstimationLerpSpeed = 1;
 
     public void Start()
@@ -52,9 +52,9 @@ public class LightingManager : MonoBehaviour
         // Shader.SetGlobalColor(_albedoShaderId, new Color(_albedoColor.r, _albedoColor.g, _albedoColor.b, 1));
         foreach (var mesh in _meshes)
         {
-            mesh.sharedMaterial.SetColor(_colorShaderId, Color.black);
-            mesh.sharedMaterial.SetColor("_SpecColor", Color.black);
-            mesh.sharedMaterial.SetFloat("_Glossiness", 0);
+            mesh.sharedMaterial.SetColor(_colorShaderId, _color);
+            mesh.sharedMaterial.SetColor("_SpecColor", _color);
+            mesh.sharedMaterial.SetFloat("_Glossiness", _lightEstimationSource.intensity);
         }
         // Shader.SetGlobalVector(_lightDirShaderId, new Vector3(0, 1, 0).normalized);
 
@@ -104,6 +104,7 @@ public class LightingManager : MonoBehaviour
         _lightEstimationSource.intensity = args.lightEstimation.averageBrightness ?? 1;
         _lightEstimationSource.colorTemperature = args.lightEstimation.averageColorTemperature ?? 5800;
 
+        Debug.Log("avgBrightness: " + args.lightEstimation.averageBrightness);
         _colorTarget = ColorTemperatureToRGB(_lightEstimationSource.colorTemperature) * _lightEstimationSource.intensity * _brightnessMultiplier;
     }
 
