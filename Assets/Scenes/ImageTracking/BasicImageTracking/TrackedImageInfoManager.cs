@@ -63,6 +63,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             // Set canvas camera
             var canvas = trackedImage.GetComponentInChildren<Canvas>();
+            if (canvas == null)
+                return;
             canvas.worldCamera = worldSpaceCanvasCamera;
 
             // Update information about the tracked image

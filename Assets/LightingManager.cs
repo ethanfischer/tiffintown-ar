@@ -48,7 +48,6 @@ public class LightingManager : MonoBehaviour
     void LerpAndApplyLightingAndShadows()
     {
         _color = Color.Lerp(_color, _colorTarget, _lightEstimationLerpSpeed * Time.deltaTime);
-        Debug.Log("Color: " + _color);
         // Shader.SetGlobalColor(_albedoShaderId, new Color(_albedoColor.r, _albedoColor.g, _albedoColor.b, 1));
         foreach (var mesh in _meshes)
         {
@@ -104,7 +103,6 @@ public class LightingManager : MonoBehaviour
         _lightEstimationSource.intensity = args.lightEstimation.averageBrightness ?? 1;
         _lightEstimationSource.colorTemperature = args.lightEstimation.averageColorTemperature ?? 5800;
 
-        Debug.Log("avgBrightness: " + args.lightEstimation.averageBrightness);
         _colorTarget = ColorTemperatureToRGB(_lightEstimationSource.colorTemperature) * _lightEstimationSource.intensity * _brightnessMultiplier;
     }
 
