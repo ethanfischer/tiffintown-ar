@@ -1058,6 +1058,7 @@ GameObject:
   - component: {fileID: 923721516}
   - component: {fileID: 923721515}
   - component: {fileID: 923721520}
+  - component: {fileID: 923721521}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1344,6 +1345,21 @@ MonoBehaviour:
   m_EnvironmentDepthMode: 3
   m_EnvironmentDepthTemporalSmoothing: 1
   m_OcclusionPreferenceMode: 0
+--- !u!114 &923721521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923721513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9434fc48ca54d13b3ab991659c71b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cameraManager: {fileID: 923721516}
+  _lightEstimationSource: {fileID: 2017973561}
+  _trackedImageManager: {fileID: 1413594762}
 --- !u!1 &1338354114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,10 +2075,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: ff767624-f63b-4d6b-b5d3-59e559d16f71
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2091,10 +2107,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 3eb48504-b85e-4834-aca9-a5f68afc8820
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2115,10 +2131,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 6203000a-b472-4cde-a319-8c29dba1cf4d
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2155,10 +2171,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 90a3987d-b2bc-4898-98be-f5889b9b9acd
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -2203,10 +2219,10 @@ MonoBehaviour:
   m_DirectionalAnchorRotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 31fe7844-4940-4280-adad-1fe5f791f705
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
