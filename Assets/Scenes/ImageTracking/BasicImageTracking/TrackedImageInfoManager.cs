@@ -100,6 +100,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
+            Debug.Log("TrackedImagesChanged");
             foreach (var trackedImage in eventArgs.added)
             {
                 // Give the initial image a reasonable default scale

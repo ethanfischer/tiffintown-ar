@@ -49,6 +49,7 @@ public class LightingManager : MonoBehaviour
     {
         _color = Color.Lerp(_color, _colorTarget, _lightEstimationLerpSpeed * Time.deltaTime);
         // Shader.SetGlobalColor(_albedoShaderId, new Color(_albedoColor.r, _albedoColor.g, _albedoColor.b, 1));
+        if(_meshes == null) return;
         foreach (var mesh in _meshes)
         {
             mesh.sharedMaterial.SetColor(_colorShaderId, _color);

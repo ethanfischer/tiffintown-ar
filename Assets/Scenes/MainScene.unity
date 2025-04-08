@@ -313,6 +313,62 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &748619896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748619898}
+  - component: {fileID: 748619899}
+  m_Layer: 0
+  m_Name: Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748619898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748619896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08183459, y: 0.047490485, z: -0.037540004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &748619899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748619896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd4d6759faf3479ba6f51e46a969576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleKey: 3
+  openOnStart: 0
+  shakeToOpen: 1
+  shakeRequiresTouch: 0
+  shakeAcceleration: 3
+  toggleThresholdSeconds: 0.5
+  restrictLogCount: 0
+  maxLogCount: 1000
+  collapseLogOnStart: 0
+  logFontSize: 24
+  scaleFactor: 1
+  skin: {fileID: 0}
 --- !u!1 &817072505
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,10 +893,10 @@ MonoBehaviour:
   m_TrackingStateAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: ab6b92fa-55b4-42d1-b3ca-c7c369c0ab25
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -869,10 +925,10 @@ MonoBehaviour:
   m_SelectActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Select Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: d1c18a7b-2df5-4a1c-b40f-68f673a56d1b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -893,10 +949,10 @@ MonoBehaviour:
   m_ActivateActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Activate Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: df6155f0-d91c-46e5-ba94-78fac2f7b575
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -949,10 +1005,10 @@ MonoBehaviour:
   m_UIPressActionValue:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Press Action Value
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 454ea56d-9d83-4602-8b43-0c61d61538d8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -997,10 +1053,10 @@ MonoBehaviour:
   m_DirectionalAnchorRotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 8663ec17-4062-42c7-8522-afe206ef096b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1342,7 +1398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HumanSegmentationStencilMode: 0
   m_HumanSegmentationDepthMode: 0
-  m_EnvironmentDepthMode: 3
+  m_EnvironmentDepthMode: 0
   m_EnvironmentDepthTemporalSmoothing: 1
   m_OcclusionPreferenceMode: 0
 --- !u!114 &923721521
@@ -1433,7 +1489,6 @@ GameObject:
   - component: {fileID: 1413594762}
   - component: {fileID: 1413594761}
   - component: {fileID: 1413594765}
-  - component: {fileID: 1413594766}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -1470,7 +1525,7 @@ MonoBehaviour:
   m_SerializedLibrary: {fileID: 11400000, guid: c86e375d7e7430442a1104e88fa21f21,
     type: 2}
   m_MaxNumberOfMovingImages: 1
-  m_TrackedImagePrefab: {fileID: 7129980038245711556, guid: 17a700ac1cf1041d7b7aadba1d3a531e,
+  m_TrackedImagePrefab: {fileID: 4810070897363447899, guid: c442777769f144cd496866449287721b,
     type: 3}
 --- !u!114 &1413594763
 MonoBehaviour:
@@ -1518,20 +1573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 0}
---- !u!114 &1413594766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413594759}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18df90ffa762d48e1b680118ec0b3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelPrefab: {fileID: 7129980038245711556, guid: 17a700ac1cf1041d7b7aadba1d3a531e,
-    type: 3}
 --- !u!1 &1581044394
 GameObject:
   m_ObjectHideFlags: 0
