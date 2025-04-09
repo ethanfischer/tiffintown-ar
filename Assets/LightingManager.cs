@@ -26,13 +26,15 @@ public class LightingManager : MonoBehaviour
 
     public void Start()
     {
-        _meshes = _trackedImageManager.trackedImagePrefab.GetComponentsInChildren<MeshRenderer>();
-        Assert.IsNotNull(_meshes, "Tracked Image Prefab does not have a MeshRenderer");
-
-        _cameraManager.frameReceived += OnFrameReceived;
-        // SetupShadowSettings();
-        Assert.IsNotNull(_lightEstimationSource, "Light Estimation Source is null. It's needed to make AR lighting more realistic by estimating the direction of irl lights");
-        _lightEstimationSource.useColorTemperature = true;
+        if (_trackedImageManager?.trackedImagePrefab != null)
+        {
+            _meshes = _trackedImageManager.trackedImagePrefab.GetComponentsInChildren<MeshRenderer>();
+            Assert.IsNotNull(_meshes, "Tracked Image Prefab does not have a MeshRenderer");
+            _cameraManager.frameReceived += OnFrameReceived;
+            // SetupShadowSettings();
+            Assert.IsNotNull(_lightEstimationSource, "Light Estimation Source is null. It's needed to make AR lighting more realistic by estimating the direction of irl lights");
+            _lightEstimationSource.useColorTemperature = true;
+        }
     }
 
     // void SetupShadowSettings()
@@ -49,7 +51,8 @@ public class LightingManager : MonoBehaviour
     {
         _color = Color.Lerp(_color, _colorTarget, _lightEstimationLerpSpeed * Time.deltaTime);
         // Shader.SetGlobalColor(_albedoShaderId, new Color(_albedoColor.r, _albedoColor.g, _albedoColor.b, 1));
-        if(_meshes == null) return;
+        if (_meshes == null) return;
+
         foreach (var mesh in _meshes)
         {
             mesh.sharedMaterial.SetColor(_colorShaderId, _color);
