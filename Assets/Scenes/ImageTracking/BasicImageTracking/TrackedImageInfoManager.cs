@@ -112,7 +112,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
             {
                 // Give the initial image a reasonable default scale
                 // trackedImage.transform.localScale = modelScale; //Ethan edit
-                Instantiate(_modelPrefab, trackedImage.transform);
+                var model = Instantiate(_modelPrefab, trackedImage.transform);
+                model.transform.localRotation = Quaternion.identity;
+                model.transform.localPosition = Vector3.zero;
+                
                 UpdateInfo(trackedImage);
             }
 
