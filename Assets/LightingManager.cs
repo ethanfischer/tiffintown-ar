@@ -2,12 +2,13 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Serialization;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARFoundation.Samples;
 
 public class LightingManager : MonoBehaviour
 {
     [SerializeField] ARCameraManager _cameraManager;
     [SerializeField] Light _lightEstimationSource;
-    [SerializeField] ARTrackedImageManager _trackedImageManager;
+    [SerializeField] TrackedImageInfoManager _trackedImageInfoManager;
     static readonly int _colorShaderId = Shader.PropertyToID("_Color");
 
     MeshRenderer[] _meshes;
@@ -26,10 +27,10 @@ public class LightingManager : MonoBehaviour
 
     public void Start()
     {
-        if (_trackedImageManager?.trackedImagePrefab != null)
+        if (_trackedImageInfoManager?.ModelPrefab != null)
         {
-            _meshes = _trackedImageManager.trackedImagePrefab.GetComponentsInChildren<MeshRenderer>();
-            Assert.IsNotNull(_meshes, "Tracked Image Prefab does not have a MeshRenderer");
+            _meshes = _trackedImageInfoManager.ModelPrefab.GetComponentsInChildren<MeshRenderer>();
+            Assert.IsNotNull(_meshes, "ModelPrefab does not have a MeshRenderer");
             _cameraManager.frameReceived += OnFrameReceived;
             // SetupShadowSettings();
             Assert.IsNotNull(_lightEstimationSource, "Light Estimation Source is null. It's needed to make AR lighting more realistic by estimating the direction of irl lights");

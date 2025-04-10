@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
@@ -18,8 +19,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [Tooltip("The camera to set on the world space UI canvas for each instantiated image info.")]
         Camera m_WorldSpaceCanvasCamera;
         
-        [SerializeField]
-        GameObject _modelPrefab;
+        [FormerlySerializedAs("_modelPrefab")]
+        public GameObject ModelPrefab;
 
         /// <summary>
         /// The prefab has a world space UI canvas,
@@ -64,10 +65,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void UpdateInfo(ARTrackedImage trackedImage)
         {
-            // _modelPrefab.transform.position = trackedImage.transform.position;
-            // _modelPrefab.transform.rotation = trackedImage.transform.rotation;
-            // _modelPrefab.transform.localScale = trackedImage.transform.localScale;
-            
             // Set canvas camera
             var canvas = trackedImage.GetComponentInChildren<Canvas>();
             if (canvas == null)
@@ -112,9 +109,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
             {
                 // Give the initial image a reasonable default scale
                 // trackedImage.transform.localScale = modelScale; //Ethan edit
-                var model = Instantiate(_modelPrefab, trackedImage.transform);
-                model.transform.localRotation = Quaternion.identity;
-                model.transform.localPosition = Vector3.zero;
+                var model = Instantiate(ModelPrefab);
+                model.transform.rotation = trackedImage.transform.rotation;
+                model.transform.position = trackedImage.transform.position;
                 
                 UpdateInfo(trackedImage);
             }

@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraManager: {fileID: 923721516}
   _lightEstimationSource: {fileID: 2017973561}
-  _trackedImageManager: {fileID: 1413594762}
+  _trackedImageInfoManager: {fileID: 0}
 --- !u!1 &1338354114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WorldSpaceCanvasCamera: {fileID: 923721519}
-  _modelPrefab: {fileID: 908714802587098655, guid: c442777769f144cd496866449287721b,
+  ModelPrefab: {fileID: 908714802587098655, guid: c442777769f144cd496866449287721b,
     type: 3}
   m_DefaultTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &1413594762
