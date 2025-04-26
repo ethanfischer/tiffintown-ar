@@ -192,6 +192,8 @@ namespace Consolation
         
         void CheckForTwoFingerTripleTap()
 		{
+            if(Application.isEditor) return;
+            
 			if (Touchscreen.current.touches.Count(t => t.press.isPressed) == 0)
 			{
 				_haveFingersReleased = true;
