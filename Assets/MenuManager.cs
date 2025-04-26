@@ -5,32 +5,35 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField]
-    CanvasGroup _mainMenu;
-    [SerializeField]
-    CanvasGroup _menu2;
-    [SerializeField]
-    Button _mainMenuButton;
-    [SerializeField]
     Button _backButton;
+    [SerializeField]
+    Button _homeButton;
+    [SerializeField]
+    Button _shopButton;
+    [SerializeField]
+    Button _profileButton;
+    
 
     void Start()
     {
-        _mainMenuButton.onClick.AddListener(GoToMenu2);
-        _backButton.onClick.AddListener(Proceed);
-    }
-    
-    void Proceed()
-    {
-        Debug.Log("Proceed");
-        _mainMenu.Hide();
-        _menu2.Hide();
+        _homeButton.onClick.AddListener(GoHome);
+        _shopButton.onClick.AddListener(GoShop);
+        _profileButton.onClick.AddListener(GoProfile);
     }
 
-    void GoToMenu2()
+    void GoHome()
     {
-        Debug.Log("Go to menu 2");
-        _mainMenu.Hide();
-        _menu2.Show();
+        Debug.Log("Go home");
+    }
+    
+    void GoShop()
+    {
+        Debug.Log("Go shop");
+    }
+    
+    void GoProfile()
+    {
+        Debug.Log("Go profile");
     }
 }
 
