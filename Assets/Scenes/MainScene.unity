@@ -2748,6 +2748,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 200499348591670470, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: "The Children of H\xFArin"
+      objectReference: {fileID: 0}
+    - target: {fileID: 496683061489102627, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: Books You've Never Heard Of
+      objectReference: {fileID: 0}
+    - target: {fileID: 509228158472040697, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: ' Jay Asher'
+      objectReference: {fileID: 0}
     - target: {fileID: 982502316972534967, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2787,6 +2802,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563846165928774294, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: ' Khaled Hosseini'
       objectReference: {fileID: 0}
     - target: {fileID: 1791781042632467439, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -2888,21 +2908,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2419874113569748893, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2419874113569748893, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2419874113569748893, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4016738086112389682, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2977,6 +2982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231817317682530848, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: Fit for TV
       objectReference: {fileID: 0}
     - target: {fileID: 5341565882134471517, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -3013,6 +3023,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 699
       objectReference: {fileID: 0}
+    - target: {fileID: 6000085020423095725, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: In the Woods
+      objectReference: {fileID: 0}
     - target: {fileID: 6025603141710983017, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3028,15 +3043,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 2097
       objectReference: {fileID: 0}
-    - target: {fileID: 6239633094427977284, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+    - target: {fileID: 6277107210051393109, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6239633094427977284, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      propertyPath: m_text
+      value: Best of 2007
       objectReference: {fileID: 0}
     - target: {fileID: 6313999289442233086, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -3053,45 +3063,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 1398
       objectReference: {fileID: 0}
-    - target: {fileID: 6432075293856225965, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+    - target: {fileID: 6385021402377669052, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
+      propertyPath: m_text
+      value: Marked
       objectReference: {fileID: 0}
-    - target: {fileID: 6432075293856225965, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+    - target: {fileID: 6444285724369613712, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
+      propertyPath: m_text
+      value: ' Patrick Rothfuss'
       objectReference: {fileID: 0}
-    - target: {fileID: 6432075293856225965, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+    - target: {fileID: 6888701527788469954, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 6432075293856225965, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081516286935990510, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7081516286935990510, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7177650433379662608, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7177650433379662608, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      propertyPath: m_text
+      value: Stieg Larsson
       objectReference: {fileID: 0}
     - target: {fileID: 7422128266450763510, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -3102,16 +3087,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7459542336760481224, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7459542336760481224, guid: 463182f98f58f46be8dfc146fb2fdf5c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 7685201407072107489, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -3188,6 +3163,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8313518482181052324, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: 'Animal, Vegetable, Miracle: A Year of Food Life'
+      objectReference: {fileID: 0}
     - target: {fileID: 8750566090077019308, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3217,6 +3197,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2097
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044603542118261545, guid: 463182f98f58f46be8dfc146fb2fdf5c,
+        type: 3}
+      propertyPath: m_text
+      value: Top 10
       objectReference: {fileID: 0}
     - target: {fileID: 9150280022471203867, guid: 463182f98f58f46be8dfc146fb2fdf5c,
         type: 3}
@@ -3254,9 +3239,7 @@ PrefabInstance:
       value: 1398
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1419951193845186326, guid: 463182f98f58f46be8dfc146fb2fdf5c, type: 3}
-    - {fileID: 2473003906287979642, guid: 463182f98f58f46be8dfc146fb2fdf5c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463182f98f58f46be8dfc146fb2fdf5c, type: 3}
