@@ -1,0 +1,72 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="project://database/Assets/UI/BookstoreUI.uss" />
+    <ui:VisualElement name="root" class="root">
+        
+        <!-- Top Search Bar -->
+        <ui:VisualElement name="search-bar" class="search-bar">
+            <ui:TextField name="search-field" class="search-field" placeholder-text="Search..." />
+            <ui:Button name="cart-button" class="cart-button" text="🛒" />
+            <ui:Button name="profile-button" class="profile-button" />
+        </ui:VisualElement>
+        
+        <!-- Main Scrollable Content -->
+        <ui:ScrollView name="main-content" class="main-content">
+            
+            <!-- Featured Book Section -->
+            <ui:VisualElement name="featured-section" class="featured-section">
+                <ui:Label name="best-seller-badge" class="best-seller-badge" text="Best Seller" />
+                <ui:Label name="featured-title" class="featured-title" text="Whispers in the Forgotten Woods" />
+                <ui:Label name="featured-author" class="featured-author" text="by Alicia Rolland" />
+            </ui:VisualElement>
+            
+            <!-- Ebooks/Audiobooks Toggle -->
+            <ui:VisualElement name="toggle-section" class="toggle-section">
+                <ui:Button name="ebooks-btn" class="toggle-button toggle-active" text="Ebooks" />
+                <ui:Button name="audiobooks-btn" class="toggle-button toggle-inactive" text="Audiobooks" />
+            </ui:VisualElement>
+            
+            <!-- Trending Books Header -->
+            <ui:VisualElement name="trending-header" class="trending-header">
+                <ui:Label text="Trending Book" class="section-title" />
+                <ui:Label text="→" class="arrow" />
+            </ui:VisualElement>
+            
+            <!-- Trending Books Horizontal Scroll -->
+            <ui:ScrollView name="trending-books" class="trending-books-scroll" mode="Horizontal">
+                <ui:VisualElement class="book-card">
+                    <ui:VisualElement class="book-cover book-cover-red" />
+                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                </ui:VisualElement>
+                <ui:VisualElement class="book-card">
+                    <ui:VisualElement class="book-cover book-cover-blue" />
+                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                </ui:VisualElement>
+                <ui:VisualElement class="book-card">
+                    <ui:VisualElement class="book-cover book-cover-green" />
+                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                </ui:VisualElement>
+            </ui:ScrollView>
+            
+            <!-- Continue Reading Section -->
+            <ui:VisualElement name="continue-reading" class="continue-reading">
+                <ui:VisualElement class="continue-book-cover" />
+                <ui:VisualElement class="continue-info">
+                    <ui:Label text="Sinister Shadow" class="continue-title" />
+                    <ui:Label text="Olivia Wilcox" class="continue-author" />
+                    <ui:Label text="Continue Reading →" class="continue-link" />
+                </ui:VisualElement>
+                <ui:Button text="×" class="close-button" />
+            </ui:VisualElement>
+            
+        </ui:ScrollView>
+        
+        <!-- Bottom Navigation -->
+        <ui:VisualElement name="bottom-nav" class="bottom-nav">
+            <ui:Button name="home-btn" class="nav-button nav-active" text="🏠&#10;Home" />
+            <ui:Button name="category-btn" class="nav-button" text="📂&#10;Category" />
+            <ui:Button name="library-btn" class="nav-button" text="📚&#10;Library" />
+            <ui:Button name="profile-btn" class="nav-button" text="👤&#10;Profile" />
+        </ui:VisualElement>
+        
+    </ui:VisualElement>
+</ui:UXML>
