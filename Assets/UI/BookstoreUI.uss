@@ -4,20 +4,27 @@
     height: 100%;
     background-color: #F5F5F5;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* Search Bar */
 .search-bar {
     background-color: white;
+    min-height: 80px;
     height: 80px;
     flex-direction: row;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom-width: 1px;
     border-bottom-color: #E0E0E0;
+    flex-shrink: 0;
 }
 
 .search-field {
@@ -53,14 +60,18 @@
 /* Main Content */
 .main-content {
     flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: column;
+    height: auto;
+    min-height: 0;
 }
 
 /* Featured Section */
 .featured-section {
-    height: 300px;
+    min-height: 250px;
+    flex-grow: 1;
     background-color: #2C4A3B;
-    padding: 30px;
+    padding: 8%;
     justify-content: center;
     position: relative;
 }
@@ -89,7 +100,7 @@
 /* Toggle Section */
 .toggle-section {
     flex-direction: row;
-    padding: 20px;
+    padding: 5%;
     background-color: white;
 }
 
@@ -118,7 +129,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5%;
     background-color: white;
 }
 
@@ -136,9 +147,9 @@
 /* Trending Books Scroll */
 .trending-books-scroll {
     background-color: white;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .book-card {
@@ -166,6 +177,10 @@
     background-color: #2C5F41;
 }
 
+.book-cover-orange {
+    background-color: #D67032;
+}
+
 .book-rating {
     font-size: 12px;
     color: #FFA500;
@@ -177,8 +192,8 @@
     flex-direction: row;
     align-items: center;
     background-color: #F0F0F0;
-    margin: 20px;
-    padding: 15px;
+    margin: 5%;
+    padding: 4%;
     border-radius: 8px;
     position: relative;
 }
@@ -229,12 +244,14 @@
 /* Bottom Navigation */
 .bottom-nav {
     height: 100px;
+    min-height: 80px;
     background-color: white;
     flex-direction: row;
     border-top-width: 1px;
     border-top-color: #E0E0E0;
     padding-top: 10px;
     padding-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .nav-button {

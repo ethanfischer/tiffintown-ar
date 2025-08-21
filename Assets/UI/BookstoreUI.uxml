@@ -19,31 +19,35 @@
                 <ui:Label name="featured-author" class="featured-author" text="by Alicia Rolland" />
             </ui:VisualElement>
             
-            <!-- Ebooks/Audiobooks Toggle -->
+            <!-- Books/Magazines Toggle -->
             <ui:VisualElement name="toggle-section" class="toggle-section">
-                <ui:Button name="ebooks-btn" class="toggle-button toggle-active" text="Ebooks" />
-                <ui:Button name="audiobooks-btn" class="toggle-button toggle-inactive" text="Audiobooks" />
+                <ui:Button name="books-btn" class="toggle-button toggle-active" text="Books" />
+                <ui:Button name="magazines-btn" class="toggle-button toggle-inactive" text="Magazines" />
             </ui:VisualElement>
             
-            <!-- Trending Books Header -->
+            <!-- To Buy Header -->
             <ui:VisualElement name="trending-header" class="trending-header">
-                <ui:Label text="Trending Book" class="section-title" />
+                <ui:Label text="To Buy" class="section-title" />
                 <ui:Label text="→" class="arrow" />
             </ui:VisualElement>
             
-            <!-- Trending Books Horizontal Scroll -->
-            <ui:ScrollView name="trending-books" class="trending-books-scroll" mode="Horizontal">
-                <ui:VisualElement class="book-card">
+            <!-- To Buy Items Horizontal Scroll -->
+            <ui:ScrollView name="trending-items" class="trending-books-scroll" mode="Horizontal">
+                <ui:VisualElement class="book-card" name="book-1">
                     <ui:VisualElement class="book-cover book-cover-red" />
                     <ui:Label text="⭐ 4.5" class="book-rating" />
                 </ui:VisualElement>
-                <ui:VisualElement class="book-card">
+                <ui:VisualElement class="book-card" name="book-2">
                     <ui:VisualElement class="book-cover book-cover-blue" />
                     <ui:Label text="⭐ 4.5" class="book-rating" />
                 </ui:VisualElement>
-                <ui:VisualElement class="book-card">
+                <ui:VisualElement class="book-card" name="magazine-1">
                     <ui:VisualElement class="book-cover book-cover-green" />
-                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                    <ui:Label text="⭐ 4.2" class="book-rating" />
+                </ui:VisualElement>
+                <ui:VisualElement class="book-card" name="magazine-2">
+                    <ui:VisualElement class="book-cover book-cover-orange" />
+                    <ui:Label text="⭐ 4.3" class="book-rating" />
                 </ui:VisualElement>
             </ui:ScrollView>
             
