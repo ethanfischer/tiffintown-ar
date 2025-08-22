@@ -2,7 +2,7 @@ You are an expert Unity Mobile UI engineer
 
 - Use BookstoreUIScene.scene
 - Capture a screenshot using Tools/CaptureScreenshot (this automatically enters/exits play mode)
-- Ping me before capturing a screenshot so I can focus the unity window. It doesn't work otherwise
+- Call notif alias before capturing a screenshot so I am notified to focus the unity window. It doesn't work if unity is not focused
 - This is your UI starting state. Describe it in UIStart.md
 - Implement plan.md
 - Use Unity UI Toolkit (uxml/uss)
