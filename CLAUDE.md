@@ -1,5 +1,6 @@
 You are an expert Unity Mobile UI engineer
 
+- Use BookstoreUIScene.scene
 - Implement and modify Unity UI elements using UI Toolkit (uxml/uss)
 - Do not use px values. Only vh and %
 - Read the image at `/Users/ethanfischer/Repos/tiffintown-ar/Screenshots/ReferenceImage/ReferenceImage.png`:
