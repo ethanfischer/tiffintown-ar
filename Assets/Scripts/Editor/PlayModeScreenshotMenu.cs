@@ -5,11 +5,11 @@ using UnityEngine;
 
 public static class PlayModeScreenshotMenu
 {
-    internal const string KeyPending   = "PMS_Pending";
-    internal const string KeyPath      = "PMS_Path";
+    internal const string KeyPending = "PMS_Pending";
+    internal const string KeyPath = "PMS_Path";
     internal const string KeySuperSize = "PMS_SuperSize";
 
-    [MenuItem("Tools/Capture Screenshot (Auto)")]
+    [MenuItem("Tools/CaptureScreenshot")]
     public static void CaptureScreenshotInPlayMode()
     {
         // <ProjectRoot>/Screenshots/Screenshot_YYYYMMDD_HHMMSS.png
@@ -30,6 +30,15 @@ public static class PlayModeScreenshotMenu
             EditorApplication.isPlaying = true;
         else
             Debug.Log("[PlayModeScreenshot] Already in Play Mode; will capture this session.");
+    }
+
+    [MenuItem("Tools/Clear Cached Screenshot Paths")]
+    static void ClearKeys()
+    {
+        EditorPrefs.DeleteKey("PMS_Pending");
+        EditorPrefs.DeleteKey("PMS_Path");
+        EditorPrefs.DeleteKey("PMS_SuperSize");
+        UnityEngine.Debug.Log("[PlayModeScreenshot] Cleared cached EditorPrefs.");
     }
 }
 #endif
