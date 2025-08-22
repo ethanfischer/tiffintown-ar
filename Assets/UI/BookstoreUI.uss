@@ -14,38 +14,40 @@
 /* Search Bar */
 .search-bar {
     background-color: white;
-    min-height: 80px;
-    height: 80px;
+    height: 8%;
+    min-height: 8%;
     flex-direction: row;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-bottom-width: 1px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom-width: 1;
     border-bottom-color: #E0E0E0;
     flex-shrink: 0;
 }
 
 .search-field {
     flex-grow: 1;
-    height: 50px;
-    margin-right: 15px;
+    height: 80%;
+    margin-right: 3%;
     background-color: #F5F5F5;
-    border-radius: 25px;
+    border-radius: 50%;
     border-width: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 100%;
 }
 
 .cart-button, .profile-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 80%;
+    height: 80%;
+    min-width: 80%;
+    min-height: 80%;
+    border-radius: 50%;
     border-width: 0;
-    margin-left: 10px;
-    font-size: 20px;
+    margin-left: 2%;
+    font-size: 100%;
 }
 
 .cart-button {
@@ -68,50 +70,53 @@
 
 /* Featured Section */
 .featured-section {
-    min-height: 250px;
-    flex-grow: 1;
+    height: 30%;
+    min-height: 30%;
+    max-height: 30%;
     background-color: #2C4A3B;
-    padding: 8%;
+    padding: 5%;
     justify-content: center;
     position: relative;
+    flex-shrink: 0;
 }
 
 .best-seller-badge {
     color: white;
-    font-size: 14px;
+    font-size: 80%;
     -unity-font-style: bold;
-    margin-bottom: 10px;
+    margin-bottom: 2%;
 }
 
 .featured-title {
     color: white;
-    font-size: 28px;
+    font-size: 150%;
     -unity-font-style: bold;
-    margin-bottom: 8px;
+    margin-bottom: 2%;
     max-width: 70%;
     white-space: normal;
 }
 
 .featured-author {
     color: #CCCCCC;
-    font-size: 16px;
+    font-size: 100%;
 }
 
 /* Toggle Section */
 .toggle-section {
     flex-direction: row;
-    padding: 5%;
+    padding: 3% 5%;
     background-color: white;
+    flex-shrink: 0;
 }
 
 .toggle-button {
-    height: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 20px;
+    height: 80%;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 50%;
     border-width: 0;
-    margin-right: 15px;
-    font-size: 16px;
+    margin-right: 3%;
+    font-size: 100%;
 }
 
 .toggle-active {
@@ -129,40 +134,46 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 5%;
+    padding: 3% 5%;
     background-color: white;
+    flex-shrink: 0;
 }
 
 .section-title {
-    font-size: 18px;
+    font-size: 110%;
     -unity-font-style: bold;
     color: #333333;
 }
 
 .arrow {
-    font-size: 18px;
+    font-size: 110%;
     color: #666666;
 }
 
 /* Trending Books Scroll */
 .trending-books-scroll {
     background-color: white;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     padding-left: 5%;
     padding-right: 5%;
+    height: 25%;
+    min-height: 25%;
+    max-height: 25%;
+    flex-shrink: 0;
 }
 
 .book-card {
-    width: 120px;
-    margin-right: 15px;
+    width: 25%;
+    margin-right: 3%;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .book-cover {
-    width: 100px;
-    height: 140px;
-    border-radius: 8px;
-    margin-bottom: 8px;
+    width: 80%;
+    height: 80%;
+    border-radius: 5%;
+    margin-bottom: 2%;
 }
 
 .book-cover-red {
@@ -182,7 +193,7 @@
 }
 
 .book-rating {
-    font-size: 12px;
+    font-size: 75%;
     color: #FFA500;
     -unity-text-align: middle-center;
 }
@@ -192,18 +203,19 @@
     flex-direction: row;
     align-items: center;
     background-color: #F0F0F0;
-    margin: 5%;
-    padding: 4%;
-    border-radius: 8px;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 5%;
     position: relative;
+    flex-shrink: 0;
 }
 
 .continue-book-cover {
-    width: 60px;
-    height: 80px;
+    width: 15%;
+    height: 80%;
     background-color: #8B4A47;
-    border-radius: 4px;
-    margin-right: 15px;
+    border-radius: 5%;
+    margin-right: 3%;
 }
 
 .continue-info {
@@ -211,46 +223,48 @@
 }
 
 .continue-title {
-    font-size: 16px;
+    font-size: 100%;
     -unity-font-style: bold;
     color: #333333;
-    margin-bottom: 4px;
+    margin-bottom: 1%;
 }
 
 .continue-author {
-    font-size: 14px;
+    font-size: 85%;
     color: #666666;
-    margin-bottom: 8px;
+    margin-bottom: 2%;
 }
 
 .continue-link {
-    font-size: 14px;
+    font-size: 85%;
     color: #FF6B35;
 }
 
 .close-button {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    top: 2%;
+    right: 2%;
+    width: 8%;
+    height: 25%;
+    min-width: 8%;
+    min-height: 25%;
+    border-radius: 50%;
     border-width: 0;
     background-color: transparent;
     color: #999999;
-    font-size: 20px;
+    font-size: 120%;
 }
 
 /* Bottom Navigation */
 .bottom-nav {
-    height: 100px;
-    min-height: 80px;
+    height: 10%;
+    min-height: 10%;
     background-color: white;
     flex-direction: row;
-    border-top-width: 1px;
+    border-top-width: 1;
     border-top-color: #E0E0E0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1%;
+    padding-bottom: 1%;
     flex-shrink: 0;
 }
 
@@ -258,12 +272,12 @@
     flex-grow: 1;
     border-width: 0;
     background-color: transparent;
-    font-size: 12px;
+    font-size: 75%;
     color: #999999;
     -unity-text-align: middle-center;
     white-space: normal;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .nav-active {

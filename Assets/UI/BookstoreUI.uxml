@@ -9,8 +9,8 @@
             <ui:Button name="profile-button" class="profile-button" />
         </ui:VisualElement>
         
-        <!-- Main Scrollable Content -->
-        <ui:ScrollView name="main-content" class="main-content">
+        <!-- Main Content Container -->
+        <ui:ScrollView name="main-content" class="main-content" vertical-scroller-visibility="Hidden">
             
             <!-- Featured Book Section -->
             <ui:VisualElement name="featured-section" class="featured-section">
@@ -32,7 +32,7 @@
             </ui:VisualElement>
             
             <!-- To Buy Items Horizontal Scroll -->
-            <ui:ScrollView name="trending-items" class="trending-books-scroll" mode="Horizontal">
+            <ui:ScrollView name="trending-items" class="trending-books-scroll" mode="Horizontal" horizontal-scroller-visibility="Hidden">
                 <ui:VisualElement class="book-card" name="book-1">
                     <ui:VisualElement class="book-cover book-cover-red" />
                     <ui:Label text="⭐ 4.5" class="book-rating" />

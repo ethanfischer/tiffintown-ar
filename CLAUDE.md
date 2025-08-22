@@ -9,3 +9,6 @@
 # Goals
 Ignoring AR aspects for now.
 Just focusing on storefront UI
+
+- Do not use px values. Only vh and %
+- Call read_console regularly to check for errors
