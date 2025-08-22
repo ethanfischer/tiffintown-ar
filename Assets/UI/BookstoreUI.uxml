@@ -4,7 +4,10 @@
         
         <!-- Top Search Bar -->
         <ui:VisualElement name="search-bar" class="search-bar">
-            <ui:TextField name="search-field" class="search-field" placeholder-text="Search..." />
+            <ui:VisualElement name="search-container" class="search-container">
+                <ui:Label name="search-icon" class="search-icon" text="🔍" />
+                <ui:TextField name="search-field" class="search-field" placeholder-text="Search..." />
+            </ui:VisualElement>
             <ui:Button name="cart-button" class="cart-button" text="🛒" />
             <ui:Button name="profile-button" class="profile-button" />
         </ui:VisualElement>
@@ -19,19 +22,19 @@
                 <ui:Label name="featured-author" class="featured-author" text="by Alicia Rolland" />
             </ui:VisualElement>
             
-            <!-- Books/Magazines Toggle -->
+            <!-- Ebooks/Audiobooks Toggle -->
             <ui:VisualElement name="toggle-section" class="toggle-section">
-                <ui:Button name="books-btn" class="toggle-button toggle-active" text="Books" />
-                <ui:Button name="magazines-btn" class="toggle-button toggle-inactive" text="Magazines" />
+                <ui:Button name="ebooks-btn" class="toggle-button toggle-active" text="Ebooks" />
+                <ui:Button name="audiobooks-btn" class="toggle-button toggle-inactive" text="Audiobooks" />
             </ui:VisualElement>
             
-            <!-- To Buy Header -->
+            <!-- Trending Book Header -->
             <ui:VisualElement name="trending-header" class="trending-header">
-                <ui:Label text="To Buy" class="section-title" />
+                <ui:Label text="Trending Book" class="section-title" />
                 <ui:Label text="→" class="arrow" />
             </ui:VisualElement>
             
-            <!-- To Buy Items Horizontal Scroll -->
+            <!-- Trending Books Horizontal Scroll -->
             <ui:ScrollView name="trending-items" class="trending-books-scroll" mode="Horizontal" horizontal-scroller-visibility="Hidden">
                 <ui:VisualElement class="book-card" name="book-1">
                     <ui:VisualElement class="book-cover book-cover-red" />
@@ -56,7 +59,7 @@
                 <ui:VisualElement class="continue-book-cover" />
                 <ui:VisualElement class="continue-info">
                     <ui:Label text="Sinister Shadow" class="continue-title" />
-                    <ui:Label text="Olivia Wilcox" class="continue-author" />
+                    <ui:Label text="Olivia Wilson" class="continue-author" />
                     <ui:Label text="Continue Reading →" class="continue-link" />
                 </ui:VisualElement>
                 <ui:Button text="×" class="close-button" />

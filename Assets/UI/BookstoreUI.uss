@@ -14,8 +14,8 @@
 /* Search Bar */
 .search-bar {
     background-color: white;
-    height: 8%;
-    min-height: 8%;
+    height: 10%;
+    min-height: 10%;
     flex-direction: row;
     align-items: center;
     padding-left: 5%;
@@ -27,16 +27,32 @@
     flex-shrink: 0;
 }
 
-.search-field {
+.search-container {
     flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
     height: 80%;
     margin-right: 3%;
     background-color: #F5F5F5;
     border-radius: 50%;
-    border-width: 0;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.search-icon {
+    color: #999999;
     font-size: 100%;
+    margin-right: 2%;
+}
+
+.search-field {
+    flex-grow: 1;
+    height: 100%;
+    background-color: transparent;
+    border-width: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .cart-button, .profile-button {
@@ -70,9 +86,9 @@
 
 /* Featured Section */
 .featured-section {
-    height: 30%;
-    min-height: 30%;
-    max-height: 30%;
+    height: 40%;
+    min-height: 40%;
+    max-height: 40%;
     background-color: #2C4A3B;
     padding: 5%;
     justify-content: center;
@@ -104,8 +120,11 @@
 /* Toggle Section */
 .toggle-section {
     flex-direction: row;
-    padding: 3% 5%;
+    padding: 2% 5%;
     background-color: white;
+    height: 8%;
+    min-height: 8%;
+    align-items: center;
     flex-shrink: 0;
 }
 
@@ -134,8 +153,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 3% 5%;
+    padding: 2% 5%;
     background-color: white;
+    height: 5%;
+    min-height: 5%;
     flex-shrink: 0;
 }
 
@@ -153,12 +174,12 @@
 /* Trending Books Scroll */
 .trending-books-scroll {
     background-color: white;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     padding-left: 5%;
     padding-right: 5%;
-    height: 25%;
-    min-height: 25%;
-    max-height: 25%;
+    height: 18%;
+    min-height: 18%;
+    max-height: 18%;
     flex-shrink: 0;
 }
 
@@ -203,9 +224,11 @@
     flex-direction: row;
     align-items: center;
     background-color: #F0F0F0;
-    margin: 3%;
-    padding: 3%;
+    margin: 2% 3%;
+    padding: 2% 3%;
     border-radius: 5%;
+    height: 8%;
+    min-height: 8%;
     position: relative;
     flex-shrink: 0;
 }
@@ -257,8 +280,8 @@
 
 /* Bottom Navigation */
 .bottom-nav {
-    height: 10%;
-    min-height: 10%;
+    height: 5%;
+    min-height: 5%;
     background-color: white;
     flex-direction: row;
     border-top-width: 1;
