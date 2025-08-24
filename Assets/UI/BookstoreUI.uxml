@@ -7,9 +7,9 @@
             <ui:VisualElement name="search-container" class="search-container">
                 <ui:Label name="search-icon" class="search-icon" text="🔍" />
                 <ui:TextField name="search-field" class="search-field" placeholder-text="Search..." />
+                <ui:Button name="cart-button" class="cart-button" text="🛒" />
+                <ui:Button name="profile-button" class="profile-button" />
             </ui:VisualElement>
-            <ui:Button name="cart-button" class="cart-button" text="🛒" />
-            <ui:Button name="profile-button" class="profile-button" />
         </ui:VisualElement>
         
         <!-- Main Content Container -->

@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '\"\\(.tool_input.command) - \\(.tool_input.description // \"No description\")\"' >> notif"
+            "command": "tput bel; afplay /System/Library/Sounds/Hero.aiff & terminal-notifier -title \"Terminal\" -message \"Done with task! Exit status: $?\""
           }
         ]
       }
