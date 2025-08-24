@@ -32,28 +32,26 @@ namespace TiffinAR.UI
             var root = uiDocument.rootVisualElement;
             
             // Find and setup UI elements
-            var searchField = root.Q<TextField>("search-field");
-            var cartButton = root.Q<Button>("cart-button");
-            var profileButton = root.Q<Button>("profile-button");
-            var booksBtn = root.Q<Button>("books-btn");
-            var magazinesBtn = root.Q<Button>("magazines-btn");
+            var searchField = root.Q<TextField>();
+            var profileButton = root.Q<Button>("profile-btn");
+            var ebooksBtn = root.Q<Button>("ebooks-btn");
+            var audiobooksBtn = root.Q<Button>("audiobooks-btn");
             
-            if (searchField != null && cartButton != null)
+            if (ebooksBtn != null && audiobooksBtn != null)
             {
                 Debug.Log("Mobile bookstore UI successfully loaded!");
                 
                 // Setup toggle functionality
-                if (booksBtn != null && magazinesBtn != null)
                 {
                     var trendingItems = root.Q<ScrollView>("trending-items");
                     
-                    booksBtn.clicked += () => {
-                        booksBtn.AddToClassList("toggle-active");
-                        booksBtn.RemoveFromClassList("toggle-inactive");
-                        magazinesBtn.AddToClassList("toggle-inactive");
-                        magazinesBtn.RemoveFromClassList("toggle-active");
+                    ebooksBtn.clicked += () => {
+                        ebooksBtn.AddToClassList("toggle-active");
+                        ebooksBtn.RemoveFromClassList("toggle-inactive");
+                        audiobooksBtn.AddToClassList("toggle-inactive");
+                        audiobooksBtn.RemoveFromClassList("toggle-active");
                         
-                        // Show books, hide magazines
+                        // Show ebooks, hide audiobooks
                         if (trendingItems != null)
                         {
                             var book1 = trendingItems.Q<VisualElement>("book-1");
@@ -68,13 +66,13 @@ namespace TiffinAR.UI
                         }
                     };
                     
-                    magazinesBtn.clicked += () => {
-                        magazinesBtn.AddToClassList("toggle-active");
-                        magazinesBtn.RemoveFromClassList("toggle-inactive");
-                        booksBtn.AddToClassList("toggle-inactive");
-                        booksBtn.RemoveFromClassList("toggle-active");
+                    audiobooksBtn.clicked += () => {
+                        audiobooksBtn.AddToClassList("toggle-active");
+                        audiobooksBtn.RemoveFromClassList("toggle-inactive");
+                        ebooksBtn.AddToClassList("toggle-inactive");
+                        ebooksBtn.RemoveFromClassList("toggle-active");
                         
-                        // Show magazines, hide books
+                        // Show audiobooks, hide ebooks
                         if (trendingItems != null)
                         {
                             var book1 = trendingItems.Q<VisualElement>("book-1");
@@ -89,7 +87,7 @@ namespace TiffinAR.UI
                         }
                     };
                     
-                    // Initialize to show only books by default
+                    // Initialize to show only ebooks by default
                     var trendingItemsInit = root.Q<ScrollView>("trending-items");
                     if (trendingItemsInit != null)
                     {
@@ -99,10 +97,6 @@ namespace TiffinAR.UI
                         if (magazine2 != null) magazine2.style.display = DisplayStyle.None;
                     }
                 }
-            }
-            else
-            {
-                Debug.LogWarning("Bookstore UI elements not found");
             }
         }
     }
