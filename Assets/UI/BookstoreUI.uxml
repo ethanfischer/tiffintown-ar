@@ -1,61 +1,36 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements">
-    <Style src="project://database/Assets/UI/BookstoreUI.uss" />
-    <ui:VisualElement name="root" class="root">
-        
-        <!-- Top Search Bar -->
-        <ui:VisualElement name="search-bar" class="search-bar">
-            <ui:VisualElement name="search-container" class="search-container">
-                <ui:Label name="search-icon" class="search-icon" text="🔍" />
-                <ui:TextField name="search-field" class="search-field" placeholder-text="Search..." />
-                <ui:Button name="cart-button" class="cart-button" text="🛒" />
-                <ui:Button name="profile-button" class="profile-button" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/BookstoreUI.uss?fileID=7433441132597879392&amp;guid=22b1f9f507e714fae9be9e9709de222f&amp;type=3#BookstoreUI" />
+    <ui:VisualElement name="root" class="root" style="top: 1px;">
+        <ui:ScrollView name="main-content" vertical-scroller-visibility="Hidden" class="main-content">
+            <ui:VisualElement name="featured-section" class="featured-section" style="-unity-background-image-tint-color: rgb(255, 255, 255); max-height: 100%; min-height: 100%; height: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-image: url(&quot;project://database/Assets/UI/treebackground.jpg?fileID=2800000&amp;guid=88aedf7e11c3e47c19000f8a7983ec9a&amp;type=3#treebackground&quot;); background-color: rgb(255, 255, 255); margin-left: 0;">
+                <ui:TextField placeholder-text="Search" hide-placeholder-on-focus="true" style="margin-top: 0; margin-left: 5%; margin-right: 5%; margin-bottom: 20%;" />
+                <ui:Label name="best-seller-badge" text="Best Seller" class="best-seller-badge" style="margin-left: 5%; margin-right: 5%;" />
+                <ui:Label name="featured-title" text="Whispers in the Forgotten Woods" class="featured-title" style="width: auto; height: auto; flex-wrap: nowrap; flex-direction: column; max-width: 100%; max-height: 100%; margin-left: 5%; margin-right: 5%;" />
+                <ui:Label name="featured-author" text="by Alicia Rolland" class="featured-author" style="margin-left: 5%; margin-right: 5%;" />
             </ui:VisualElement>
-        </ui:VisualElement>
-        
-        <!-- Main Content Container -->
-        <ui:ScrollView name="main-content" class="main-content" vertical-scroller-visibility="Hidden">
-            
-            <!-- Featured Book Section -->
-            <ui:VisualElement name="featured-section" class="featured-section">
-                <ui:Label name="best-seller-badge" class="best-seller-badge" text="Best Seller" />
-                <ui:Label name="featured-title" class="featured-title" text="Whispers in the Forgotten Woods" />
-                <ui:Label name="featured-author" class="featured-author" text="by Alicia Rolland" />
-            </ui:VisualElement>
-            
-            <!-- Ebooks/Audiobooks Toggle -->
             <ui:VisualElement name="toggle-section" class="toggle-section">
-                <ui:Button name="ebooks-btn" class="toggle-button toggle-active" text="Ebooks" />
-                <ui:Button name="audiobooks-btn" class="toggle-button toggle-inactive" text="Audiobooks" />
+                <ui:Button name="ebooks-btn" text="Ebooks" class="toggle-button toggle-active" />
+                <ui:Button name="audiobooks-btn" text="Audiobooks" class="toggle-button toggle-inactive" />
             </ui:VisualElement>
-            
-            <!-- Trending Book Header -->
-            <ui:VisualElement name="trending-header" class="trending-header">
-                <ui:Label text="Trending Book" class="section-title" />
-                <ui:Label text="→" class="arrow" />
-            </ui:VisualElement>
-            
-            <!-- Trending Books Horizontal Scroll -->
-            <ui:ScrollView name="trending-items" class="trending-books-scroll" mode="Horizontal" horizontal-scroller-visibility="Hidden">
-                <ui:VisualElement class="book-card" name="book-1">
+            <ui:ScrollView name="trending-items" mode="Horizontal" horizontal-scroller-visibility="Hidden" class="trending-books-scroll" style="height: auto; max-height: 30%; min-height: 30%; top: 2%;">
+                <ui:VisualElement name="book-1" class="book-card">
                     <ui:VisualElement class="book-cover book-cover-red" />
                     <ui:Label text="⭐ 4.5" class="book-rating" />
                 </ui:VisualElement>
-                <ui:VisualElement class="book-card" name="book-2">
+                <ui:VisualElement name="book-2" class="book-card">
                     <ui:VisualElement class="book-cover book-cover-blue" />
                     <ui:Label text="⭐ 4.5" class="book-rating" />
                 </ui:VisualElement>
-                <ui:VisualElement class="book-card" name="magazine-1">
+                <ui:VisualElement name="magazine-1" class="book-card">
                     <ui:VisualElement class="book-cover book-cover-green" />
                     <ui:Label text="⭐ 4.2" class="book-rating" />
                 </ui:VisualElement>
-                <ui:VisualElement class="book-card" name="magazine-2">
+                <ui:VisualElement name="magazine-2" class="book-card">
                     <ui:VisualElement class="book-cover book-cover-orange" />
                     <ui:Label text="⭐ 4.3" class="book-rating" />
                 </ui:VisualElement>
             </ui:ScrollView>
-            
-            <!-- Continue Reading Section -->
-            <ui:VisualElement name="continue-reading" class="continue-reading">
+            <ui:VisualElement name="continue-reading" class="continue-reading" style="margin-top: 5%;">
                 <ui:VisualElement class="continue-book-cover" />
                 <ui:VisualElement class="continue-info">
                     <ui:Label text="Sinister Shadow" class="continue-title" />
@@ -64,16 +39,12 @@
                 </ui:VisualElement>
                 <ui:Button text="×" class="close-button" />
             </ui:VisualElement>
-            
         </ui:ScrollView>
-        
-        <!-- Bottom Navigation -->
-        <ui:VisualElement name="bottom-nav" class="bottom-nav">
-            <ui:Button name="home-btn" class="nav-button nav-active" text="🏠&#10;Home" />
-            <ui:Button name="category-btn" class="nav-button" text="📂&#10;Category" />
-            <ui:Button name="library-btn" class="nav-button" text="📚&#10;Library" />
-            <ui:Button name="profile-btn" class="nav-button" text="👤&#10;Profile" />
+        <ui:VisualElement name="bottom-nav" class="bottom-nav" style="min-height: 7%;">
+            <ui:Button name="home-btn" text="🏠&#10;Home" class="nav-button nav-active" />
+            <ui:Button name="category-btn" text="📂&#10;Category" class="nav-button" />
+            <ui:Button name="library-btn" text="📚&#10;Library" class="nav-button" />
+            <ui:Button name="profile-btn" text="👤&#10;Profile" class="nav-button" />
         </ui:VisualElement>
-        
     </ui:VisualElement>
 </ui:UXML>
