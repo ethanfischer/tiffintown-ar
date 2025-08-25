@@ -1,47 +1,43 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/BookstoreUI.uss?fileID=7433441132597879392&amp;guid=22b1f9f507e714fae9be9e9709de222f&amp;type=3#BookstoreUI" />
     <ui:VisualElement name="root" class="root" style="top: 1px;">
-        <ui:ScrollView name="main-content" vertical-scroller-visibility="Hidden" class="main-content">
+        <ui:ScrollView name="main-content" vertical-scroller-visibility="Hidden" class="main-content" style="-unity-background-image-tint-color: rgb(224, 0, 0); background-color: rgb(255, 255, 255);">
             <ui:VisualElement name="featured-section" class="featured-section" style="-unity-background-image-tint-color: rgb(255, 255, 255); max-height: 100%; min-height: 100%; height: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-image: url(&quot;project://database/Assets/UI/treebackground.jpg?fileID=2800000&amp;guid=88aedf7e11c3e47c19000f8a7983ec9a&amp;type=3#treebackground&quot;); background-color: rgb(255, 255, 255); margin-left: 0;">
                 <ui:TextField placeholder-text="Search" hide-placeholder-on-focus="true" style="margin-top: 0; margin-left: 5%; margin-right: 5%; margin-bottom: 20%;" />
                 <ui:Label name="best-seller-badge" text="Best Seller" class="best-seller-badge" style="margin-left: 5%; margin-right: 5%;" />
-                <ui:Label name="featured-title" text="Whispers in the Forgotten Woods" class="featured-title" style="width: auto; height: auto; flex-wrap: nowrap; flex-direction: column; max-width: 100%; max-height: 100%; margin-left: 5%; margin-right: 5%;" />
-                <ui:Label name="featured-author" text="by Alicia Rolland" class="featured-author" style="margin-left: 5%; margin-right: 5%;" />
+                <ui:Label name="featured-title" text="The Story of Josephine Baker" class="featured-title" style="width: auto; height: auto; flex-wrap: nowrap; flex-direction: column; max-width: 100%; max-height: 100%; margin-left: 5%; margin-right: 5%;" />
+                <ui:Label name="featured-author" text="illustrated by Sophie" class="featured-author" style="margin-left: 5%; margin-right: 5%;" />
             </ui:VisualElement>
-            <ui:VisualElement name="toggle-section" class="toggle-section">
-                <ui:Button name="ebooks-btn" text="Ebooks" class="toggle-button toggle-active" />
-                <ui:Button name="audiobooks-btn" text="Audiobooks" class="toggle-button toggle-inactive" />
+            <ui:VisualElement name="toggle-section" class="toggle-section" style="margin-top: 4%;">
+                <ui:Button name="ebooks-btn" text="Books" class="toggle-button toggle-active" style="border-left-color: rgb(255, 107, 53); border-right-color: rgb(255, 107, 53); border-top-color: rgb(255, 107, 53); border-bottom-color: rgb(255, 107, 53); background-color: rgb(255, 189, 164); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; color: rgb(0, 0, 0);" />
+                <ui:Button name="audiobooks-btn" text="Audio" class="toggle-button toggle-inactive" />
             </ui:VisualElement>
-            <ui:ScrollView name="trending-items" mode="Horizontal" horizontal-scroller-visibility="Hidden" class="trending-books-scroll" style="height: auto; max-height: 30%; min-height: 30%; top: 2%;">
+            <ui:ScrollView name="trending-items" mode="Horizontal" horizontal-scroller-visibility="Hidden" class="trending-books-scroll" style="height: auto; max-height: 30%; min-height: 30%; top: 2%; -unity-background-image-tint-color: rgb(240, 240, 240); background-color: rgb(255, 255, 255);">
                 <ui:VisualElement name="book-1" class="book-card">
-                    <ui:VisualElement class="book-cover book-cover-red" />
-                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                    <ui:VisualElement class="book-cover book-cover-red" style="background-image: url(&quot;project://database/Assets/Images/thestoryofjosephinebaker.jpg?fileID=2800000&amp;guid=178a7a8e9c1494db1bb8c08f9d3b2b8c&amp;type=3#thestoryofjosephinebaker&quot;); background-size: 100% 75%; background-color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="book-2" class="book-card">
-                    <ui:VisualElement class="book-cover book-cover-blue" />
-                    <ui:Label text="⭐ 4.5" class="book-rating" />
+                    <ui:VisualElement class="book-cover book-cover-blue" style="background-color: rgb(255, 255, 255); background-image: url(&quot;project://database/Assets/Images/thestoryofruthharkness.jpg?fileID=2800000&amp;guid=387d893386df74d019eca31a0e814921&amp;type=3#thestoryofruthharkness&quot;); background-size: 100% 75%;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="magazine-1" class="book-card">
-                    <ui:VisualElement class="book-cover book-cover-green" />
-                    <ui:Label text="⭐ 4.2" class="book-rating" />
+                    <ui:VisualElement class="book-cover book-cover-green" style="background-image: url(&quot;project://database/Assets/Scenes/ImageTracking/Images/unitylogowhiteonblack.jpg?fileID=2800000&amp;guid=5a804a4ff1f7e4038b1f1e6f4ad8a02b&amp;type=3#unitylogowhiteonblack&quot;); background-size: 100% 75%; background-color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="magazine-2" class="book-card">
-                    <ui:VisualElement class="book-cover book-cover-orange" />
-                    <ui:Label text="⭐ 4.3" class="book-rating" />
+                    <ui:VisualElement class="book-cover book-cover-orange" style="background-color: rgb(255, 255, 255); background-image: url(&quot;project://database/Assets/Models/CircusTent/00.png?fileID=2800000&amp;guid=f7659b8d040cc458e9ff56225da16cf8&amp;type=3#00&quot;); background-size: 100% 75%;" />
                 </ui:VisualElement>
             </ui:ScrollView>
-            <ui:VisualElement name="continue-reading" class="continue-reading" style="margin-top: 5%;">
-                <ui:VisualElement class="continue-book-cover" />
+            <ui:VisualElement name="continue-reading" class="continue-reading" style="margin-top: 5%; height: 25%;">
+                <ui:VisualElement class="continue-book-cover" style="height: 70%; width: 15%; background-image: url(&quot;project://database/Assets/Images/thestoryofjosephinebaker.jpg?fileID=2800000&amp;guid=178a7a8e9c1494db1bb8c08f9d3b2b8c&amp;type=3#thestoryofjosephinebaker&quot;);" />
                 <ui:VisualElement class="continue-info">
-                    <ui:Label text="Sinister Shadow" class="continue-title" />
-                    <ui:Label text="Olivia Wilson" class="continue-author" />
-                    <ui:Label text="Continue Reading →" class="continue-link" />
+                    <ui:Label text="The Story of Josephine Baker" class="continue-title" style="margin-bottom: 0; text-overflow: ellipsis; max-width: 100%; font-size: 10%;" />
+                    <ui:Label text="Sophie" class="continue-author" style="margin-top: 0; margin-bottom: 0;" />
+                    <ui:Label text="Continue Reading →" class="continue-link" style="margin-top: 0;" />
                 </ui:VisualElement>
                 <ui:Button text="×" class="close-button" />
             </ui:VisualElement>
         </ui:ScrollView>
         <ui:VisualElement name="bottom-nav" class="bottom-nav" style="min-height: 7%;">
-            <ui:Button name="home-btn" text="🏠&#10;Home" class="nav-button nav-active" />
+            <ui:Button name="home-btn" icon-image="project://database/Assets/Textures/back_button.png?fileID=2800000&amp;guid=d1653dacd2aa84c76880f318174a77c6&amp;type=3#back_button" class="nav-button nav-active" />
             <ui:Button name="category-btn" text="📂&#10;Category" class="nav-button" />
             <ui:Button name="library-btn" text="📚&#10;Library" class="nav-button" />
             <ui:Button name="profile-btn" text="👤&#10;Profile" class="nav-button" />
