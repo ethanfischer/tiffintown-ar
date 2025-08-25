@@ -37,10 +37,10 @@
             </ui:VisualElement>
         </ui:ScrollView>
         <ui:VisualElement name="bottom-nav" class="bottom-nav" style="min-height: 7%;">
-            <ui:Button name="home-btn" icon-image="project://database/Assets/Textures/back_button.png?fileID=2800000&amp;guid=d1653dacd2aa84c76880f318174a77c6&amp;type=3#back_button" class="nav-button nav-active" />
-            <ui:Button name="category-btn" text="📂&#10;Category" class="nav-button" />
-            <ui:Button name="library-btn" text="📚&#10;Library" class="nav-button" />
-            <ui:Button name="profile-btn" text="👤&#10;Profile" class="nav-button" />
+            <ui:Button name="home-btn" icon-image="project://database/Assets/HardArtcore/UI/SimpleIcons/Sprites/Icons/Border/ic_home.png?fileID=2800000&amp;guid=dc3333c3111d1514ca535d8429bfb2a7&amp;type=3#ic_home" class="nav-button nav-active" style="width: 10px;" />
+            <ui:Button name="category-btn" icon-image="project://database/Assets/HardArtcore/UI/SimpleIcons/Sprites/Icons/Border/ic_backpack.png?fileID=2800000&amp;guid=5c1f44cf94ab5c446a15567878097d46&amp;type=3#ic_backpack" class="nav-button" style="width: 10px;" />
+            <ui:Button name="library-btn" icon-image="project://database/Assets/HardArtcore/UI/SimpleIcons/Sprites/Icons/Border/ic_inbox.png?fileID=2800000&amp;guid=3fcf53ed64cf66e4f9c370e669b40197&amp;type=3#ic_inbox" enable-rich-text="false" class="nav-button" style="width: 10px;" />
+            <ui:Button name="profile-btn" icon-image="project://database/Assets/HardArtcore/UI/SimpleIcons/Sprites/Icons/Border/ic_love.png?fileID=2800000&amp;guid=7c49a414b1494d64b8aa950be603cab5&amp;type=3#ic_love" class="nav-button" style="width: 10px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
