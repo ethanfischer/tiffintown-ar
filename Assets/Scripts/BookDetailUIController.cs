@@ -59,8 +59,13 @@ namespace TiffinAR.UI
             if (backButton != null)
             {
                 backButton.clicked += () => {
+                    Debug.Log("Back button clicked - calling callback");
                     onBackPressed?.Invoke();
                 };
+            }
+            else
+            {
+                Debug.LogError("Back button not found in BookDetail UI!");
             }
             
             if (buyButton != null)

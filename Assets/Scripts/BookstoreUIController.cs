@@ -175,9 +175,40 @@ namespace TiffinAR.UI
             
             if (bookDetailController != null)
             {
+                // Hide the main bookstore UI
+                var mainUIDocument = GetComponent<UIDocument>();
+                if (mainUIDocument != null)
+                {
+                    Debug.Log("Hiding main UI - setting display to None");
+                    mainUIDocument.rootVisualElement.style.display = DisplayStyle.None;
+                }
+                else
+                {
+                    Debug.LogError("Main UIDocument not found when trying to hide!");
+                }
+                
                 bookDetailController.ShowBookDetail(book, () => {
                     // Back button callback - return to main bookstore view
-                    SetupUI();
+                    Debug.Log("Back callback triggered - showing main UI");
+                    
+                    // Hide the book detail UI
+                    var bookDetailUIDocument = bookDetailController.GetComponent<UIDocument>();
+                    if (bookDetailUIDocument != null)
+                    {
+                        bookDetailUIDocument.rootVisualElement.style.display = DisplayStyle.None;
+                        Debug.Log("Book detail UI hidden");
+                    }
+                    
+                    // Show the main UI again
+                    if (mainUIDocument != null)
+                    {
+                        mainUIDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+                        Debug.Log("Main UI display set to Flex");
+                    }
+                    else
+                    {
+                        Debug.LogError("Main UIDocument is null!");
+                    }
                 });
             }
             else
