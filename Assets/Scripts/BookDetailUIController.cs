@@ -54,7 +54,16 @@ namespace TiffinAR.UI
             // Set cover image
             if (bookCover != null && !string.IsNullOrEmpty(currentBook.coverImagePath))
             {
-                bookCover.style.backgroundImage = new StyleBackground(Resources.Load<Texture2D>(currentBook.coverImagePath));
+                var texture = Resources.Load<Texture2D>(currentBook.coverImagePath);
+                if (texture != null)
+                {
+                    bookCover.style.backgroundImage = new StyleBackground(texture);
+                    Debug.Log($"Book cover image loaded: {currentBook.coverImagePath}");
+                }
+                else
+                {
+                    Debug.LogError($"Failed to load book cover image: {currentBook.coverImagePath}");
+                }
             }
             
             // Setup button handlers
