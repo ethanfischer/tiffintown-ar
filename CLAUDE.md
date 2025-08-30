@@ -11,6 +11,7 @@ Reference image is at `/Users/ethanfischer/Repos/tiffintown-ar/Screenshots/Refer
 - For text elements: use white-space: nowrap and overflow: hidden to prevent text stretching
 - Always set flex-shrink: 0 on elements that should maintain fixed sizes
 - NEVER use bare numbers in CSS - always include units (px, %, etc.) for border-width, margin, padding, etc.
+- NEVER show scrollbars: Always use vertical-scroller-visibility="Hidden" and horizontal-scroller-visibility="Hidden" on ScrollView elements
 
 # Common Issues & Solutions
 - **Child elements appearing outside parent**: Usually caused by conflicting CSS sizing (e.g., width: 80% + max-width: 40px). Use ONLY max-width/max-height for fixed-size elements

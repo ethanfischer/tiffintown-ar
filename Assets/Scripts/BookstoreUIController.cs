@@ -27,7 +27,7 @@ namespace TiffinAR.UI
                     id = "book-1",
                     title = "The Story of Josephine Baker",
                     author = "illustrated by Sophie",
-                    description = "A captivating biography of the legendary entertainer and civil rights activist Josephine Baker. This beautifully illustrated book tells the story of her rise from poverty to international stardom, her work as a spy during World War II, and her tireless fight for civil rights.",
+                    description = "The inspiring story of Josephine Baker - legendary entertainer, civil rights activist, and World War II spy.",
                     coverImagePath = "thestoryofjosephinebaker",
                     price = 1.00f, // Updated to match Shopify price
                     priceDisplayText = "$1.00",

@@ -5,7 +5,7 @@
             <ui:Button name="back-button" text="← Back" class="back-button" />
         </ui:VisualElement>
         
-        <ui:ScrollView name="book-detail-content" class="book-detail-content">
+        <ui:ScrollView name="book-detail-content" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden" class="book-detail-content">
             <ui:VisualElement name="book-cover-container" class="book-cover-container">
                 <ui:VisualElement name="book-cover-large" class="book-cover-large" />
             </ui:VisualElement>
@@ -16,10 +16,10 @@
                 <ui:Label name="book-price" text="$0.00" class="book-price" />
                 <ui:Label name="book-description" text="Book description goes here..." class="book-description" />
             </ui:VisualElement>
-            
-            <ui:VisualElement name="book-actions" class="book-actions">
-                <ui:Button name="buy-button" text="Buy Now" class="buy-button" />
-            </ui:VisualElement>
         </ui:ScrollView>
+        
+        <ui:VisualElement name="book-actions" class="book-actions">
+            <ui:Button name="buy-button" text="Buy Now" class="buy-button" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
