@@ -89,6 +89,13 @@
 .book-author {
     font-size: 110%;
     color: #666666;
+    margin-bottom: 2%;
+}
+
+.book-price {
+    font-size: 130%;
+    -unity-font-style: bold;
+    color: #FF6B35;
     margin-bottom: 4%;
 }
 

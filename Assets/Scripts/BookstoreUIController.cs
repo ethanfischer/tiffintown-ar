@@ -29,7 +29,10 @@ namespace TiffinAR.UI
                     author = "illustrated by Sophie",
                     description = "A captivating biography of the legendary entertainer and civil rights activist Josephine Baker. This beautifully illustrated book tells the story of her rise from poverty to international stardom, her work as a spy during World War II, and her tireless fight for civil rights.",
                     coverImagePath = "thestoryofjosephinebaker",
-                    price = 12.99f
+                    price = 1.00f, // Updated to match Shopify price
+                    priceDisplayText = "$1.00",
+                    shopifyProductId = "gid://shopify/ProductVariant/50717261725997", // Josephine Baker variant ID
+                    isAvailableOnShopify = true
                 },
                 ["book-2"] = new BookData
                 {
@@ -38,7 +41,10 @@ namespace TiffinAR.UI
                     author = "illustrated by Sophie",
                     description = "The remarkable true story of Ruth Harkness, the American socialite who became the first person to bring a live giant panda to the Western world. An adventure story of determination, courage, and conservation.",
                     coverImagePath = "thestoryofruthharkness",
-                    price = 14.99f
+                    price = 14.99f,
+                    priceDisplayText = "$14.99",
+                    shopifyProductId = "", // No Shopify product yet
+                    isAvailableOnShopify = false // Disabled until Shopify product is created
                 }
             };
         }

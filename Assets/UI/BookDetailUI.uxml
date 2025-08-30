@@ -13,6 +13,7 @@
             <ui:VisualElement name="book-info" class="book-info">
                 <ui:Label name="book-title" text="Book Title" class="book-title" />
                 <ui:Label name="book-author" text="Author Name" class="book-author" />
+                <ui:Label name="book-price" text="$0.00" class="book-price" />
                 <ui:Label name="book-description" text="Book description goes here..." class="book-description" />
             </ui:VisualElement>
             
