@@ -1,15 +1,46 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
 
 namespace TiffinAR.UI
 {
     public class BookstoreUIController : MonoBehaviour
     {
         [SerializeField] public VisualTreeAsset uiTemplate;
+        [SerializeField] private BookDetailUIController bookDetailController;
+        
+        // Sample book data
+        private Dictionary<string, BookData> bookDatabase;
         
         private void Start()
         {
+            InitializeBookDatabase();
             SetupUI();
+        }
+        
+        private void InitializeBookDatabase()
+        {
+            bookDatabase = new Dictionary<string, BookData>
+            {
+                ["book-1"] = new BookData
+                {
+                    id = "book-1",
+                    title = "The Story of Josephine Baker",
+                    author = "illustrated by Sophie",
+                    description = "A captivating biography of the legendary entertainer and civil rights activist Josephine Baker. This beautifully illustrated book tells the story of her rise from poverty to international stardom, her work as a spy during World War II, and her tireless fight for civil rights.",
+                    coverImagePath = "thestoryofjosephinebaker",
+                    price = 12.99f
+                },
+                ["book-2"] = new BookData
+                {
+                    id = "book-2",
+                    title = "The Story of Ruth Harkness",
+                    author = "illustrated by Sophie",
+                    description = "The remarkable true story of Ruth Harkness, the American socialite who became the first person to bring a live giant panda to the Western world. An adventure story of determination, courage, and conservation.",
+                    coverImagePath = "thestoryofruthharkness",
+                    price = 14.99f
+                }
+            };
         }
         
         private void SetupUI()
@@ -97,6 +128,61 @@ namespace TiffinAR.UI
                         if (magazine2 != null) magazine2.style.display = DisplayStyle.None;
                     }
                 }
+                
+                // Setup book click handlers
+                SetupBookClickHandlers(root);
+            }
+        }
+        
+        private void SetupBookClickHandlers(VisualElement root)
+        {
+            var trendingItems = root.Q<ScrollView>("trending-items");
+            if (trendingItems != null)
+            {
+                // Add click handlers for each book
+                var book1 = trendingItems.Q<VisualElement>("book-1");
+                var book2 = trendingItems.Q<VisualElement>("book-2");
+                
+                if (book1 != null)
+                {
+                    book1.RegisterCallback<ClickEvent>(evt => {
+                        if (bookDatabase.ContainsKey("book-1"))
+                        {
+                            ShowBookDetail(bookDatabase["book-1"]);
+                        }
+                    });
+                }
+                
+                if (book2 != null)
+                {
+                    book2.RegisterCallback<ClickEvent>(evt => {
+                        if (bookDatabase.ContainsKey("book-2"))
+                        {
+                            ShowBookDetail(bookDatabase["book-2"]);
+                        }
+                    });
+                }
+            }
+        }
+        
+        private void ShowBookDetail(BookData book)
+        {
+            // If not assigned, try to find it automatically
+            if (bookDetailController == null)
+            {
+                bookDetailController = FindObjectOfType<BookDetailUIController>();
+            }
+            
+            if (bookDetailController != null)
+            {
+                bookDetailController.ShowBookDetail(book, () => {
+                    // Back button callback - return to main bookstore view
+                    SetupUI();
+                });
+            }
+            else
+            {
+                Debug.LogError("BookDetailController not found! Make sure BookDetailUIController is in the scene.");
             }
         }
     }

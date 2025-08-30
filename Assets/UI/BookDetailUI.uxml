@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/BookDetailUI.uss" />
+    <ui:VisualElement name="book-detail-root" class="book-detail-root">
+        <ui:VisualElement name="book-detail-header" class="book-detail-header">
+            <ui:Button name="back-button" text="← Back" class="back-button" />
+        </ui:VisualElement>
+        
+        <ui:ScrollView name="book-detail-content" class="book-detail-content">
+            <ui:VisualElement name="book-cover-container" class="book-cover-container">
+                <ui:VisualElement name="book-cover-large" class="book-cover-large" />
+            </ui:VisualElement>
+            
+            <ui:VisualElement name="book-info" class="book-info">
+                <ui:Label name="book-title" text="Book Title" class="book-title" />
+                <ui:Label name="book-author" text="Author Name" class="book-author" />
+                <ui:Label name="book-description" text="Book description goes here..." class="book-description" />
+            </ui:VisualElement>
+            
+            <ui:VisualElement name="book-actions" class="book-actions">
+                <ui:Button name="buy-button" text="Buy Now" class="buy-button" />
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>
